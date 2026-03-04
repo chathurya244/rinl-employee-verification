@@ -86,6 +86,6 @@ project/
 ├── backend/
 │   └── app.py
 ├── frontend/
-│   ├── all HTML files
+│   ├── all HTML files and css files
 │   └── app.js
 ├──readme.txt
