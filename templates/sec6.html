@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ID Card Generation</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/sec5.css') }}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<style>
+.c5{ background-color:green; color:white; }
+.c6{ background-color:blue; color:white; }
+</style>
+
+<body>
+
+<header>
+<div class="container_1">
+<div class="logo">
+<img src="{{ url_for('static', filename='images/rinlproject.png') }}">
+<p>RINL Employee Verification Portal</p>
+</div>
+</div>
+</header>
+
+
+<section>
+
+<div class="ball">
+
+<div class="ball1">
+<div class="circle c1"><i class="fa-solid fa-check"></i></div>
+<p>About</p>
+</div>
+
+<div class="ball1">
+<div class="circle c2"><i class="fa-solid fa-check"></i></div>
+<p>Registration</p>
+</div>
+
+<div class="ball1">
+<div class="circle c3"><i class="fa-solid fa-check"></i></div>
+<p>Safety Guidelines</p>
+</div>
+
+<div class="ball1">
+<div class="circle c4"><i class="fa-solid fa-check"></i></div>
+<p>MCQ Test</p>
+</div>
+
+<div class="ball1">
+<div class="circle c5"><i class="fa-solid fa-check"></i></div>
+<p>Document Upload</p>
+</div>
+
+<div class="ball1">
+<div class="circle c6">6</div>
+<p>ID Card Generation</p>
+</div>
+
+</div>
+
+
+<div class="white-box">
+
+<div class="heading">
+<p>Your ID Card Generated Successfully</p>
+</div>
+
+<div align="center">
+
+<h2>Employee Details</h2>
+<br>
+
+
+<table>
+    <tr>
+        <td class="label">Name</td>
+        <td class="colon">:&nbsp;</td>
+        <td class="value">{{ name }}</td>
+    </tr>
+    <tr>
+        <td class="label">Employee ID</td>
+        <td class="colon">:&nbsp;</td>
+        <td class="value">{{ employee_id }}</td>
+    </tr>
+    <tr>
+        <td class="label">Department</td>
+        <td class="colon">:&nbsp;</td>
+        <td class="value">{{ department }}</td>
+    </tr>
+    <tr>
+        <td class="label">Email</td>
+        <td class="colon">:&nbsp;</td>
+        <td class="value">{{ email }}</td>
+    </tr>
+</table>
+
+<br>
+
+<h3>Photo</h3>
+<img src="{{ photo_url }}" width="150">
+
+<br><br>
+
+<a href="/">
+<button>Finish</button>
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+</body>
+</html>

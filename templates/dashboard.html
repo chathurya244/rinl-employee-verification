@@ -1,0 +1,41 @@
+<!-- dashboard.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+  <h2>Applicant List</h2>
+  <div id="applicantTable"></div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", async () => {
+      const res = await fetch("http://127.0.0.1:4000/admin/applicants");
+      const data = await res.json();
+      const tableDiv = document.getElementById("applicantTable");
+
+      if (!Array.isArray(data)) {
+        tableDiv.innerHTML = `<p>Error: ${data.error}</p>`;
+        return;
+      }
+
+      const table = document.createElement("table");
+      table.border = "1";
+      const header = table.insertRow();
+      const keys = Object.keys(data[0] || {});
+      keys.forEach(k => header.insertCell().innerText = k);
+
+      data.forEach(app => {
+        const row = table.insertRow();
+        keys.forEach(k => {
+          const cell = row.insertCell();
+          cell.innerText = app[k] || "";
+        });
+      });
+
+      tableDiv.appendChild(table);
+    });
+  </script>
+</body>
+</html>
