@@ -1,91 +1,177 @@
-# RINL Employee Verification System
+# RINL Employee Verification & ID Card Management System
 
-This project is a web application for employee registration and document verification, using a Flask backend with MongoDB and a JavaScript/HTML/CSS frontend.
+A full-stack web application designed to streamline employee registration, safety compliance verification, document validation, and digital ID generation for industrial plant access.
 
----
-
-## Prerequisites
-
-- **Python 3.8+**
-- **Node.js** (for npm, optional, only if you want to use frontend build tools)
-- **MongoDB** (running locally on default port 27017)
+This system simulates a real-world industrial onboarding workflow where employees must review safety protocols, complete an assessment, register their details, upload required documents, and undergo verification before access approval.
 
 ---
 
-## Backend Setup
+## 🚀 Key Features
 
-1. **Install Python dependencies:**
-
-   ```terminal
-   pip install flask flask-cors pymongo gridfs
-   ```
-
-2. **Start MongoDB**  
-   Make sure MongoDB is running locally.  
-   On Windows, you can start it from the command prompt:
-   ```terminal
-   mongod
-   ```
-
-3. **Run the Flask backend:**
-
-   ```terminal
-   cd backend
-   python app.py
-   ```
-
-   The backend will be available at [http://127.0.0.1:4000](http://127.0.0.1:4000).
+- Multi-step employee onboarding workflow
+- Industrial safety guidelines (Do’s & Don’ts module)
+- Safety assessment test (MCQ-based validation)
+- Employee registration with form validation
+- Secure document upload and storage using MongoDB GridFS
+- Email-based applicant tracking
+- Dynamic verification and ID card generation
+- Structured REST-based backend using Flask
 
 ---
 
-## Frontend Setup
+## 🛠 Tech Stack
 
-1. **No build step is required.**  
-   Just open the `frontend/sec1.html` file in your browser to start the registration process.
+**Backend**
+- Python
+- Flask
+- Flask-CORS
+- PyMongo
+- GridFS
 
-2. **Make sure the backend is running before using the frontend.**
+**Database**
+- MongoDB
 
----
+**Frontend**
+- HTML5
+- CSS3
+- JavaScript (Vanilla JS)
 
-## Usage
-
-1. **Introduction**
-    An introductory page
-
-
-2. **Do's & Dont's
-    This page explains the do's and dont's in the plant premises
-
-
-3. **Test**
-    A samll test on what you have understood in the previous page
-
-
-4. **Register:**  
-   Fill out the registration form (`sec4.html`).  
-   On successful registration, your email is saved in the browser for document upload.
-
-5. **Upload Documents:**  
-   After registration, you are redirected to `sec5.html` to upload your documents.
-
-6. **Verification:**  
-   After uploading, you are redirected to `sec6.html`.
+**Version Control**
+- Git
+- GitHub
 
 ---
 
-## Troubleshooting
+## 🏗 System Architecture
 
-- If you see "Please register first to get your email linked," make sure you completed registration and your browser allows localStorage.
-- If you get MongoDB connection errors, ensure MongoDB is running on your machine.
-- For CORS issues, make sure you are running both frontend and backend on `localhost`.
+Client (HTML/CSS/JS)  
+⬇  
+Flask Backend (REST APIs)  
+⬇  
+MongoDB Database  
+⬇  
+GridFS (File Storage for Documents)
 
 ---
-## Project structure
 
+## 📂 Project Structure
+
+```
 project/
 ├── backend/
 │   └── app.py
 ├── frontend/
-│   ├── all HTML files and css files
+│   ├── sec1.html
+│   ├── sec2.html
+│   ├── sec3.html
+│   ├── sec4.html
+│   ├── sec5.html
+│   ├── sec6.html
+│   ├── styles.css
 │   └── app.js
-├──readme.txt
+├── README.md
+```
+
+---
+
+## ⚙️ Backend Setup
+
+### 1️⃣ Install Dependencies
+
+```bash
+pip install flask flask-cors pymongo
+```
+
+### 2️⃣ Start MongoDB
+
+Ensure MongoDB is running locally on default port (27017).
+
+### 3️⃣ Run Backend Server
+
+```bash
+cd backend
+python app.py
+```
+
+Backend will run at:
+
+```
+http://127.0.0.1:5000
+
+```
+
+---
+
+## 🌐 Frontend Setup
+
+No build tools required.
+
+Simply open:
+
+```
+frontend/sec1.html
+```
+
+in your browser.
+
+⚠️ Ensure backend is running before using the frontend.
+
+---
+
+## 🔄 Application Workflow
+
+1. **Introduction Page**
+2. **Safety Guidelines (Do’s & Don’ts)**
+3. **Safety Assessment Test**
+4. **Employee Registration**
+5. **Document Upload**
+6. **Verification & ID Generation**
+
+---
+
+## 📌 Core Functionalities Implemented
+
+- REST API design using Flask
+- Frontend-backend communication using fetch API
+- File upload handling and storage via MongoDB GridFS
+- Session-based email tracking
+- Client-side and server-side validation
+- Structured multi-page workflow system
+
+---
+
+## 🎯 Learning Outcomes
+
+- Built a full-stack web application from scratch
+- Implemented database connectivity and file storage
+- Designed structured API endpoints
+- Applied modular frontend-backend separation
+- Practiced version control using Git and GitHub
+- Understood real-world industrial workflow simulation
+
+---
+
+## 🔗 Project Repository
+
+Add your GitHub link here:
+
+```
+https://github.com/chathurya244/rinl-employee-verification
+```
+
+
+## 📌 Future Enhancements
+
+- Role-based authentication system
+- Admin dashboard for verification approval
+- Email notification integration
+- Deployment using Render / Railway / Docker
+- Production-grade WSGI server integration
+
+---
+
+## 👨‍💻 Author
+
+ERRA CHATHURYA SAI  
+B.Tech Student  
+Full-Stack Development Enthusiast
